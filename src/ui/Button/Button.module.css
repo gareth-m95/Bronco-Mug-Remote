@@ -9,6 +9,8 @@
   text-align: center;
   white-space: nowrap;
   transition: background-color 0.3s;
+  padding: 8px 24px;
+  width: 200px;
 }
 
 .button:focus {

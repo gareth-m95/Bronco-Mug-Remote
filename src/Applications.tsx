@@ -42,14 +42,16 @@ const Applications = () => {
 
   return (
     <div className={styles.Applications}>
-      {applications.map((app) => (
-        <SingleApplication key={app.id} application={app} />
-      ))}
+      <div className={styles.container}>
+        {applications.map((app) => (
+          <SingleApplication key={app.id} application={app} />
+        ))}
+      </div>
 
       <Button
         disabled={isLoading || isFinalPage}
         onClick={onClick}
-        className=""
+        className={styles.Button}
       >
         {isLoading ? "Loading..." : "Load More"}
       </Button>

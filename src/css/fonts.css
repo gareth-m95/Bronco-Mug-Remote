@@ -1,20 +1,18 @@
 @font-face {
-    font-family: 'Aesop';
-    src: url('../fonts/Aesop-Light.woff2') format('woff2'),
-        url('../fonts/Aesop-Light.woff') format('woff');
-    font-weight: 500;
+  font-family: "Aesop";
+  src: url("../fonts/Aesop-Light.woff2") format("woff2"),
+    url("../fonts/Aesop-Light.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Aesop';
-    src: url('../fonts/Aesop-Medium.woff2') format('woff2'),
-        url('../fonts/Aesop-Medium.woff') format('woff');
-    font-weight: 700;
+  font-family: "Aesop";
+  src: url("../fonts/Aesop-Medium.woff2") format("woff2"),
+    url("../fonts/Aesop-Medium.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Aesop';
-    src: url('../fonts/Aesop-Bold.woff2') format('woff2'),
-        url('../fonts/Aesop-Bold.woff') format('woff');
-    font-weight: 900;
+  font-family: "Aesop";
+  src: url("../fonts/Aesop-Bold.woff2") format("woff2"),
+    url("../fonts/Aesop-Bold.woff") format("woff");
+  font-weight: 900;
 }
