@@ -1,5 +1,6 @@
 import { FAKER_SEED } from "./config.js";
 import { faker } from "@faker-js/faker";
+import { TApplication, TLoanHistory } from "../types/index.js";
 
 faker.seed(FAKER_SEED);
 
@@ -10,22 +11,6 @@ const LOAN_TYPES = [
   "RLS",
   "CBILS",
 ] as const;
-
-type TLoanType = (typeof LOAN_TYPES)[number];
-
-type TApplication = {
-  id: number;
-  first_name: string;
-  last_name: string;
-  loan_amount: number;
-  loan_type: TLoanType;
-  email: string;
-  company: string;
-  date_created: Date;
-  expiry_date: Date;
-  avatar: string;
-  loan_history: TLoanHistory[];
-};
 
 type TApplicationDBRow = {
   applications: TApplication[];
@@ -60,14 +45,6 @@ export function createDb(): TApplicationDBRow {
 function fakeLoanType() {
   return LOAN_TYPES[faker.number.int(LOAN_TYPES.length - 1)];
 }
-
-type TLoanHistory = {
-  loan_started: Date;
-  loan_ended: Date;
-  principle: number;
-  interest_rate: number;
-  interest: number;
-};
 
 function fakeLoanHistory(): TLoanHistory[] {
   let history: TLoanHistory[] = [];

@@ -3,7 +3,7 @@ import styles from "./SingleApplication.module.css";
 
 const SingleApplication = ({ application }) => {
   return (
-    <div className={styles.SingleApplication}>
+    <div data-testid="application" className={styles.SingleApplication}>
       <div className={styles.cell}>
         <sub>Company</sub>
         {application.company}
